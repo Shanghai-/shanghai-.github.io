@@ -1,0 +1,164 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: white;
+	color: #333333;
+	text-align: center;
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+h1 {
+	font-size: 72px;
+	font-family: 'Slabo 13px', serif;
+	color: #ffbd39;
+	background: -webkit-linear-gradient(#ff7400, #ffbd39);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin: 5px;
+}
+
+h2 {
+	font-size: 36px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-style: italic;
+	color: black;
+	text-align: left;
+	text-indent: 0px;
+	line-height: 110%;
+}
+
+.navbar ul {
+	list-style: none;
+	background-color: #ff7400;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+
+.navbar li {
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 20px;
+	height: 1.75em;
+	border-bottom: 1px solid #ff0000;
+}
+
+.navbar a {
+	display: block;
+	color: white;
+	text-decoration: none;
+	transition: .3s background-color;
+}
+
+.navbar a:hover {
+	background-color: #c50000;
+}
+
+.navbar a.active {
+	background-color: #fff;
+	color: #444;
+	cursor: default;
+}
+
+@media screen and (min-width: 800px) {
+	.navbar li {
+		width: 120px;
+		border-bottom: none;
+		height: 50px;
+		line-height: 50px;
+		font-size: 1.4em;
+		display: inline-block;
+		margin-right: -4px;
+	}
+}
+
+/* .navbar {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ff7400;
+	height: 32px;
+	margin: 0 auto;
+}*/
+
+#main-container {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+}
+
+.projects-container {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.project {
+	width: 49%;
+	overflow: hidden;
+	padding-bottom:20px;
+}
+
+.unityProject {
+	width: 49.5%;
+	overflow: hidden;
+	padding-bottom:20px;
+}
+
+.description {
+	text-align: left;
+	text-indent: 0.8em;
+	line-height: 140%;
+}
+
+.wide {
+	width:100%;
+}
+
+.video {
+	width: 100%;
+	height: 562px;
+	padding-bottom:20px;
+}
+
+.photo-container {
+	width: 390px;
+	overflow: hidden;
+}
+
+.photo-container img {
+	width: 100%;
+}
+
+.right-float {
+	float: right;
+}
+
+.left-float {
+	float: left;
+}
+
+.textbox {
+	text-align: left;
+	text-indent: 0.8em;
+	line-height: 140%;
+	width: 390px;
+}
+
+.otherbox {
+	text-align: left;
+	text-indent: 0.8em;
+	line-height: 140%;
+}
+
+.otherbox ul {
+	margin-top: 2px;
+}
