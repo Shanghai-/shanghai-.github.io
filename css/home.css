@@ -1,0 +1,61 @@
+h1 {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 700;
+	font-size: 64px;
+	color: white;
+	padding: 0px;
+	margin: 0px;
+	border-bottom: none;
+}
+
+h2 {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
+	font-size: 36px;
+	border-bottom: 3px dashed #0d3660;
+}
+
+#home {
+	padding-bottom: 17px;
+	border-bottom: 3px solid #f2e01a;
+}
+
+#top-wrapper {
+	height: 916px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: white;
+	text-align: center;
+	background-image: url(../images/pattern.png);
+	background-position: center;
+	border-bottom: 1px solid #a0a0a0;
+}
+
+#top-wrapper p {
+	font-family: 'Questrial', sans-serif;
+	font-size: 28px;
+	text-indent: 0px;
+	margin: 0px;
+}
+
+.content-wrapper p {
+	font-family: 'Questrial', sans-serif;
+	font-size: 18px;
+	line-height: 140%;
+	margin: 0px 10px;
+	text-indent: 20px;
+	text-align: justify;
+}
+
+@media only screen and (min-width: 800px) {
+	h1 {
+		font-size: 86px;
+	}
+
+	#top-wrapper p {
+		font-family: 'Questrial', sans-serif;
+		font-size: 36px;
+		margin: 0px;
+	}
+}

@@ -1,0 +1,117 @@
+html {
+	height: 100%;
+}
+
+body {
+	position: relative;
+	margin: 0px;
+	width: 100%;
+	min-height: 100%;
+	padding-bottom: 0px;
+}
+
+header {
+	width: 100%;
+	height: 325px;
+	color: white;
+	background: #0d3660;
+	position: relative;
+}
+
+h1 {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
+	font-size: 36px;
+	color: #0d3660;
+	padding-bottom: 4px;
+	border-bottom: 3px dashed #0d3660;
+}
+
+p {
+	font-family: 'Questrial', sans-serif;
+	font-size: 18px;
+	line-height: 130%;
+	text-indent: 20px;
+}
+
+span {
+	color: #3889b8;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+#navbar-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.navbar-item {
+	display: inline-block;
+	padding: 19px 40px 20px 40px;
+
+	font-family: 'Roboto Slab', serif;
+	font-size: 20px;
+	font-weight: 300;
+	text-align: center;
+	text-decoration: none;
+
+	color: white;
+	background-color: transparent;
+	transition: .5s all;
+}
+
+.navbar-item:hover {
+	background-color: #3889b8;
+	transition: .5s all;
+}
+
+main {
+	padding-top: 0px;
+	width: 100%;
+}
+
+.content-wrapper {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0px 24px 68px 0px;
+}
+
+.left-float {
+	float: left;
+}
+
+.right-float {
+	float: left;
+}
+
+footer {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #eaeaea;
+	color: #4f4f4f;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
+	font-size: 20px;
+	padding: 12px 24px;
+	border-top: 1px solid #dbdbdb;
+}
+
+@media only screen and (min-width: 800px) {
+	header {
+		height: 65px;
+		position: fixed;
+	}
+
+	main {
+		padding-top: 65px;
+	}
+
+	#navbar-wrapper {
+		flex-direction: row;
+	}
+}

@@ -1,55 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<title>About | Brendan Walsh</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link href='https://fonts.googleapis.com/css?family=Slabo+13px|Roboto:300,500' rel='stylesheet' type='text/css'>
-
-		<!-- Favicons -->
-		<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
-		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-		<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
-		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-		<link rel="manifest" href="/manifest.json">
-		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
-		<meta name="theme-color" content="#ff7400">
-	</head>
-	<body>
-		<div class="navbar">
-			<ul>
-				<li class="home"><a href="index.html">Home</a></li>
-				<li class="about"><a href="about.html">About</a></li>
-				<li class="projects"><a href="projects.html">Projects</a></li>
-				<li class="contact"><a href="contact.html">Contact</a></li>
-			</ul>
+<head>
+	<title>About | Brendan Walsh</title>
+	<link rel="stylesheet" href="css/default_style.css">
+	<link rel="stylesheet" href="css/about.css">
+	<link href="https://fonts.googleapis.com/css?family=Questrial|Roboto+Slab:300" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="description" content="Brendan Walsh's Development portfolio">
+</head>
+<body>
+	<header>
+		<div id="navbar-wrapper">
+			<a href="index.html" class="navbar-item" id="home">Home</a>
+			<a href="resume.html" class="navbar-item" id="resume">Resume</a>
+			<a href="about.html" class="navbar-item" id="about">About</a>
+			<a href="projects.html" class="navbar-item" id="projects">Projects</a>
+			<a href="contact.html" class="navbar-item" id="contact">Contact</a>
 		</div>
-
-		<div id="main-container">
-			<h1>About</h1>
-			<hr>
-			<div class = "left-float">
-				<div class="photo-container">
-					<img src="selfE.png"/>
-				</div>
-			</div>
-			<div class="right-float">
-				<div class="textbox">
-					<p>I am a current sophomore at Brown University working towards an ScB. in Computer Science. I love making tools to help people get things done smarter, whether those things are unique, creative endeavors or just picking which dining hall to get lunch at. I have worked with Java, Javascript, Scala, Swift, Objective-C, C#, PHP, MySQL, OCaml, and HTML/CSS. I'm experienced in object-oriented, imperative, and functional programming. I've developed for both mobile and desktop, and I'm teaching myself web development. My goal is to become a knowledgable and flexible developer who can address any need which should arise.</p>
-					<p>In my spare time, I like to play, analyze, and make video games. I'm a member of the Brown/RISD Game Dev team and the Rube Goldberg Machine Team. I love theater, architecture, and good design.</p>
+	</header>
+	<main>
+		<div class="content-wrapper">
+			<h1>Nice to meet you.</h1>
+			<div id="flex">
+				<img src="images/me.png"/>
+				<div id="text-container">
+					<p>I am a current sophomore at Brown University working towards an ScB. in Computer Science. I enjoy developing beautiful, responsive applications and hardware for wide consumer use. I have worked with Java, Javascript, Scala, Swift, C, PHP, MySQL, OCaml, and HTML/CSS. I'm experienced in object-oriented, imperative, and functional programming. I've developed for mobile, desktop, and web. My goal is to become a knowledgable and flexible developer who can address any need which should arise.</p>
+					<p>In my spare time, I like to play, critically analyze, and create video games. I'm a member of the Brown/RISD Game Dev team and the Rube Goldberg Machine Team. I love theater, architecture, and good design.</p>
 				</div>
 			</div>
 		</div>
-	</body>
+	</main>
+	<footer>
+		&copy; Brendan Walsh, 2017.
+	</footer>
+</body>
 </html>

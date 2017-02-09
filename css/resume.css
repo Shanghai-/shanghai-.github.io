@@ -1,0 +1,25 @@
+#resume {
+	padding-bottom: 17px;
+	border-bottom: 3px solid #f2e01a;
+}
+
+h2 {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 700;
+	font-size: 26px;
+	margin-bottom: 0px;
+}
+
+ul {
+	margin-top: 0px;
+}
+
+.content-wrapper {	
+	font-family: 'Questrial', sans-serif;
+	font-size: 18px;
+}
+
+.resume-section {
+	margin-left: 12px;
+	line-height: 140%
+}
