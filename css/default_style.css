@@ -68,6 +68,11 @@ a:hover {
 	transition: .5s all;
 }
 
+.selected-item {
+	padding-bottom: 17px;
+	border-bottom: 3px solid #f2e01a;
+}
+
 main {
 	padding-top: 0px;
 	width: 100%;

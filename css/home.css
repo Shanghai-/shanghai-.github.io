@@ -15,11 +15,6 @@ h2 {
 	border-bottom: 3px dashed #0d3660;
 }
 
-#home {
-	padding-bottom: 17px;
-	border-bottom: 3px solid #f2e01a;
-}
-
 #top-wrapper {
 	height: 916px;
 	display: flex;

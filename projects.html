@@ -7,6 +7,16 @@
 	<link href="https://fonts.googleapis.com/css?family=Questrial|Roboto+Slab:300,700" rel="stylesheet">
 	<meta charset="UTF-8">
 	<meta name="description" content="Brendan Walsh's Development portfolio">
+	<script src="js/lightbox.js"></script>
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png?v=8jemNgvx8l">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png?v=8jemNgvx8l">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png?v=8jemNgvx8l">
+	<link rel="manifest" href="images/icons/manifest.json?v=8jemNgvx8l">
+	<link rel="shortcut icon" href="images/icons/favicon.ico?v=8jemNgvx8l">
+	<meta name="msapplication-config" content="images/icons/browserconfig.xml?v=8jemNgvx8l">
+	<meta name="theme-color" content="#3889b8">
 </head>
 <body>
 	<header>
@@ -14,26 +24,42 @@
 			<a href="index.html" class="navbar-item" id="home">Home</a>
 			<a href="resume.html" class="navbar-item" id="resume">Resume</a>
 			<a href="about.html" class="navbar-item" id="about">About</a>
-			<a href="projects.html" class="navbar-item" id="projects">Projects</a>
+			<a href="projects.html" class="navbar-item selected-item" id="projects">Projects</a>
 			<a href="contact.html" class="navbar-item" id="contact">Contact</a>
 		</div>
 	</header>
 	<main>
-		<div class="content-wrapper">
+		<div class="content-wrapper" id="content-wrapper">
 			<div class="wide"><h1>Some samples of my work.</h1></div>
 
 			<div class="wide">
-				<img src="images/projects/beatdown.png"/>
+				<img src="images/projects/werewolf1.png" onclick="showLightbox(this);" data-group="Werewolf"/>
 			</div>
-			<div>
-				<h2>Uplink:Beatdown (Desktop, 2017)</h2>
-				<p>This project was developed over several weeks with a small group of members of the RISD/Brown Game Dev team. Uplink:Beatdown is a rhythm-based fighting game where the player fights against a computer-controlled enemy. The player's main skills are a dash, a block, and a simple attack, while the enemy can do both long- and short-range attacks.</p>
-				<p>The goal of the game was to work with tying events to music, something we had never done before, and to develop a fun and balanced combat system. I programmed the game along with one other developer. I wrote most of the player and enemy AI/interactivity code, as well as the menus. We took longer to polish and balance this project than we usually do because we felt that the first draft was too easy and didn't feel good to play. It could still be improved by more varied gameplay, but as a demo I'm very pleased with it.</p>
+			<div class="thin">
+				<img src="images/projects/werewolf2.png" onclick="showLightbox(this);" data-group="Werewolf"/>
+			</div>
+			<div class="thin">
+				<img src="images/projects/werewolf3.png" onclick="showLightbox(this);" data-group="Werewolf"/>
+			</div>
+			<div class="wide">
+				<h2>One Night Occult Online <span>(Web, 2017)</span></h2>
+				<p>One Night Occult Online was my final project for Creating Modern Web Apps. I worked on it along with Anna White, Amy Fifer, and Elbert Wang. The goal of the project was to translate Werewolf, a tabletop hidden-information game about lying and tricking the other players, into an online experience. We wanted to re-create the feel of the game in a web environment so that players could enjoy it with their friends even when they weren't in the same place. This meant translating all the game's concepts, rules, and logic into an asynchronous web interface.</p>
+				<p>I worked primarily on the video chat for the app, both frontend and backend. Because much of Werewolf is centered around figuring out who is lying about their identity, being able to see and hear each other is a crucial aspect of the game. I achieved a very low-latency in-browser video chat system using WebRTC protocols to create peer-to-peer video streams between the users' browsers. I implemented this in vanilla Javascript on the frontend (with a few compatability shims) and Node on the backend. In addition to video, I also implemented the statistics tracking system, the end-of-round vote system, and the game status indicator.</p>
+				<p>While working on this project I learned a great deal about real-time web protocols which I believe will be very important in the near future, and became extremely comfortable with Node.js servers. I also used SQLite 3, Express, Passport, Mustache, and web sockets in the backend. I feel very confident in my ability to build fast, responsive web applications in Node.</p>
+			</div>
+
+			<div class="wide">
+				<img src="images/projects/beatdown.png" onclick="showLightbox(this);"/>
+			</div>
+			<div class="wide">
+				<h2>Uplink:Beatdown <span>(Desktop, 2017)</span></h2>
+				<p>This project was developed over several weeks with a small group of members of the RISD/Brown Game Dev team. Uplink:Beatdown is a rhythm-based fighting game where the player fights against a computer-controlled enemy. The player's main skills are a dash, a block, and a direct attack, while the enemy can choose from several different long- and close-range attacks.</p>
+				<p>The goal of the game was to work with tying events to music, something we had never done before, and to develop a fun and balanced combat system. I programmed the game along with one other developer. I wrote most of the player and enemy AI/interactivity code, as well as the menus. We spent more time polishing and balancing this demo than we usually do in the club because we found that the first draft was too easy and didn't feel good to play. It could still be improved with more varied gameplay, but as a demo I'm very pleased with it.</p>
 				<p>Check it out: <a href="https://github.com/Shanghai-/SynthwaveGame">GitHub</a></p>
 			</div>
 
 			<div class="thin">
-				<img src="images/projects/ladders.png"/>
+				<img src="images/projects/ladders.png" onclick="showLightbox(this);"/>
 			</div>
 			<div class="thin">
 				<h2>Sir, I am Looking for this Book <span>(Desktop, 2016)</span></h2>
@@ -49,27 +75,33 @@
 				<p>Check it out: <a href="https://github.com/browngamedevelopers/FlamePuzzle.gmx">GitHub</a></p>
 			</div>
 			<div class="thin">
-				<img src="images/projects/lumen.png"/>
+				<img src="images/projects/lumen.png" onclick="showLightbox(this);"/>
 			</div>
 
 			<div class="thin">
-				<img src="images/projects/eat@brown.png"/>
+				<img src="images/projects/eat@brown.png" onclick="showLightbox(this);"/>
 			</div>
 			<div class="thin">
 				<h2>Eat@Brown <span>(iOS, 2016)</span></h2>
-				<p>Originally developed over the course of a day at Hack@Brown 2016, Eat@Brown is a simple iOS app which displays the menus at the main dining halls of Brown University. I wrote the backend code, which connects to the Brown Dining Services API and downloads the menu details as-needed and stores them locally. The other students who worked on Eat@Brown were Alex Sekula and Joe Romano. This was the first time I had used Swift, and the first time they had worked on a full iOS app.</p>
-				<p>In the future, we hope to implement a system which allows users to get notifications when their favorite foods are available, a rating system, and a way to view photos and neutritional information about the foods. Additionally, I am currently working on an Android version of the app. We hope that it can become the go-to menu information source for Brown students, so we would like to add the menus for the other eateries too.</p>
-				<p>Check it out: <a href="https://itunes.apple.com/us/app/eat-brown/id1085241764?mt=8">iOS App Store</a> <a href="https://github.com/asekula/VdubApp">GitHub (iOS)</a> <a href="https://github.com/Shanghai-/eat-at-brown-android">GitHub (Android)</a>
+				<p>Originally developed over the course of a day at Hack@Brown 2016, Eat@Brown was a simple iOS app which displayed the menus at the main dining halls of Brown University. I wrote the backend code, which connected to the Brown Dining Services API and downloaded the menu details as-needed, storing them locally. The other students who worked on Eat@Brown were Alex Sekula and Joe Romano. This was the first time I had used Swift, and the first time the other members of the team had worked on a full iOS app.</p>
+				<p>We stopped upkeep on the app the following semester because the university began using a new menu website provider which was mobile-friendly, and stopped updating the API. We have since removed it from the app store. Despite its eventual demise, working on the app was a valuable experience. I had never been to a hackathon before, nor had I ever published and maintained a complete, live app. I'm glad I got a chance to try it.</p>
+				<p>Check it out:
+					<a href="https://github.com/asekula/VdubApp">GitHub (iOS)</a>
+					<a href="https://github.com/Shanghai-/eat-at-brown-android">GitHub (Android)</a>
+				</p>
 			</div>
 
 			<div class="thin">
 				<h2>Central Park App Redesign <span>(Sketch &amp; After Effects, 2015)</span></h2>
 				<p>Designed with Damin Kim, Syed Naqvi, and Hyemi Song for the final project of CSCI1300: Designing, Developing, and Evaluating User Interfaces. We decided to remake the official Central Park app because the current app is antiquated and does not help users get the most out of the park. Our goal was to update the design to a more modern standard, as well as to improve usability, functionality, and clarity. We retained all of the features of the old app, and also added a system which allows users to leave comments on the map for other users to read. The information screen automatically displays the information for the user's current location, so there is no need to search or select.</p>
 				<p>For this project I did the original concept sketch, worked with the rest of the team to redesign each screen, and created the video. We used Sketch, Facebook's iOS 9 UI resource kit, Google Maps, and After Effects. The process of redesigning the app was surprisingly difficult; I learned that just because a flaw is obvious, that doesn't mean it's easy to address. Wrapping a new design around old functionality limits your freedom and forces you to think of creative solutions.</p>
-				<p>Check it out: <a href="http://fluffiest-lion.tumblr.com/post/134829224934/central-park-app-redesign-as-part-of-a-final-for">Tumblr</a> <a href="http://imgur.com/a/dds02">Imgur</a>
+				<p>Check it out: 
+					<a href="http://fluffiest-lion.tumblr.com/post/134829224934/central-park-app-redesign-as-part-of-a-final-for">Tumblr</a>
+					<a href="http://imgur.com/a/dds02">Imgur</a>
+				</p>
 			</div>
 			<div class="thin">
-				<img src="images/projects/centralpark.png"/>
+				<img src="images/projects/centralpark.png" onclick="showLightbox(this);"/>
 			</div>
 			<div class="wide" style="padding-bottom: 10px;">
 				<iframe width="100%" height="520px" style="width:100%;height:520px" src="https://www.youtube.com/embed/Ba91jTqFbyI" frameborder="0" allowfullscreen="true"></iframe>
@@ -80,22 +112,22 @@
 				<p>I worked on three Oculus projects for a high school class in 3D design. I used Unity (with C# and javascript scripts) to put together the games and SketchUp to make my models. Developing for the Oculus was a really unique and interesting experience, although I was hampered by my lack of previous experience in 3D game development. I would love to learn more about it in the future.</p>
 			</div>
 			<div class="wide">
-				<img src="images/projects/unityGameTwo.png"/>
+				<img src="images/projects/unityGameTwo.png" onclick="showLightbox(this);" data-group="Oculus"/>
 			</div>
 			<div class="thin">
-				<img src="images/projects/unityGameOne.png"/>
+				<img src="images/projects/unityGameOne.png" onclick="showLightbox(this);" data-group="Oculus"/>
 			</div>
 			<div class="thin">
-				<img src="images/projects/unityGameThree.png"/>
+				<img src="images/projects/unityGameThree.png" onclick="showLightbox(this);" data-group="Oculus"/>
 			</div>
 
 			<div class="thin">
-				<img src="images/projects/getTogether.png" style="width: 100%"/>
+				<img src="images/projects/getTogether.png" onclick="showLightbox(this);"/>
 			</div>
 			<div class="thin">
 				<h2>GetTogether <span>(iOS, 2014 - 2015)</span></h2>
 				<p>Inspired by a frustrating experience meeting up with a friend during the summer, GetTogether was a location-sharing app which allowed users to generate constantly-updating GPS paths to one another so that no frustrating back-and-forth texts had to be made. Users could only see each other's positions if both had agreed to meet up, making the app more secure than other similar products. The project used the Google Maps API, along with a PHP/MySQL database which I wrote. This was my first major iOS development project and my first time ever using PHP or a MySQL database.</p>
-				<p>I also worked on porting the database structure to the Google App Engine cloud backend. This was a challenge, and I was unable to finish before the school year ended and I lost my access to a mac (and XCode). The Objective-C code in the project is now somewhat antiquated, and I would be interested in rewriting it in Swift.</p>
+				<p>I also worked on porting the database &amp; server structure to the Google App Engine cloud backend. This was a challenge, and I was unable to finish before the school year ended and I lost my access to a mac (and XCode). The Objective-C code in the project is now somewhat antiquated, and I would be interested in rewriting it in Swift.</p>
 				<p>Check it out: <a href="https://github.com/Shanghai-/getTogether">GitHub</a></p>
 			</div>
 		</div>
@@ -103,5 +135,11 @@
 	<footer>
 		&copy; Brendan Walsh, 2017.
 	</footer>
+	<div id="lightbox">
+		<span id="close" onclick="closeLightbox()">&times;</span>
+		<a id="prevArrow" onclick="prevImg()">&#10094;</a>
+	    <a id="nextArrow" onclick="nextImg()">&#10095;</a>
+		<div id="lightbox-content"></div>
+	</div>
 </body>
 </html>
