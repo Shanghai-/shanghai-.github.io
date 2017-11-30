@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	nextArrow = document.getElementById('nextArrow');
 
 	for (var img of document.images) {
+		console.log("Hi mom!");
 		if (img.dataset.group !== undefined) {
 			if (groups[img.dataset.group] === undefined) {
 				groups[img.dataset.group] = [];
@@ -61,15 +62,19 @@ function showLightbox(el) {
 
 function nextImg() {
 	if (currentGroup === null) return;
+	if (currentIdx === maxIdx) return;
 	if (currentIdx++ === 0) prevArrow.style.display = 'block';
 	if (currentIdx === maxIdx) nextArrow.style.display = 'none';
+
 	setLightboxImg(currentGroup[currentIdx]);
 }
 
 function prevImg() {
 	if (currentGroup === null) return;
+	if (currentIdx === 0) return;
 	if (currentIdx-- === maxIdx) nextArrow.style.display = 'block';
 	if (currentIdx === 0) prevArrow.style.display = 'none';
+	
 	setLightboxImg(currentGroup[currentIdx]);
 }
 

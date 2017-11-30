@@ -9,7 +9,12 @@ ul {
 	margin-top: 0px;
 }
 
-.content-wrapper {	
+hr {
+	border: 0;
+	border-bottom: 2px dashed #3889b8;
+}
+
+.content-wrapper {
 	font-family: 'Questrial', sans-serif;
 	font-size: 18px;
 }
