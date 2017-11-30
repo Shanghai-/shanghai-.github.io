@@ -13,6 +13,13 @@
 	width: 100%;
 }
 
+.project-divider {
+	width: 76%;
+	height: 3px;
+	background-color: #f2e01a;
+	margin: 3px auto 25px auto;
+}
+
 h2 {
 	font-family: 'Roboto Slab', serif;
 	font-weight: 700;

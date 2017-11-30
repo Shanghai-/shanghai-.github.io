@@ -1,0 +1,124 @@
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0px;
+	width: 100%;
+	min-height: 100%;
+	padding-bottom: 0px;
+}
+
+header {
+	width: 100%;
+	color: white;
+	background: url(../images/fustic-guest-dark.jpg) no-repeat center center;
+	background-size: cover;
+	background-color: #4f4f4f;
+}
+
+.header-content {
+	padding-top: 17%;
+	padding-bottom: 3%;
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+footer {
+	background-color: #eaeaea;
+	color: #4f4f4f;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	padding: 12px 24px;
+	border-top: 1px solid #dbdbdb;
+}
+
+main {
+	width: 75%;
+	max-width: 1200px;
+	padding-top: 0px;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	color: black;
+}
+
+h1 {
+	font-family: 'Abril Fatface', serif;
+	font-size: 64px;
+	color: #72b089;
+	margin-bottom: 0px;
+	letter-spacing: 1px;
+	display: block;
+}
+
+h2 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	font-size: 32px;
+	padding-left: 50px;
+	margin-top: 0px;
+}
+
+h3 {
+	font-family: 'Abril Fatface', serif;
+	font-size: 32px;
+	color: black;
+	border-bottom: 3px solid #72b089;
+	width: 100%;
+}
+
+p {
+	text-indent: 32px;
+	line-height: 140%;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+	margin-top: 0px;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+.half-container img {
+	height: auto;
+}
+
+.attribution {
+	font-size: 14px;
+	margin-top: 0px;
+	text-indent: 0px;
+}
+
+.half-container {
+	width: 49%;
+}
+
+blockquote {
+	font-family: Garamond, serif;
+	font-size: 20px;
+	line-height: 140%;
+	background: #f9f9f9;
+	border-left: 10px solid #72b089;
+	margin: 1.5em 10px;
+	padding: 0.5em 10px;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+	font-family: Georgia, serif;
+	color: #72b089;
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+}
+
+blockquote p {
+	display: inline;
+}
