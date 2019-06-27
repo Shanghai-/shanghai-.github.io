@@ -32,6 +32,37 @@
 		<div class="content-wrapper" id="content-wrapper">
 			<div class="wide"><h1>Some samples of my work.</h1></div>
 
+			<div class="wide">
+				<img src="images/projects/vulpecula1.png" onclick="showLightbox(this);" data-group="Vulpecula"/>
+			</div>
+			<div class="thin">
+				<img src="images/projects/vulpecula2.png" onclick="showLightbox(this);" data-group="Vulpecula"/>
+			</div>
+			<div class="thin">
+				<img src="images/projects/vulpecula3.png" onclick="showLightbox(this);" data-group="Vulpecula"/>
+			</div>
+			<div class="wide">
+				<h2>Vulpecula <span>(Linux, 2019)</span></h2>
+				<p>Vulpecula is a game about an astral fox in a strange forest bearing the scars of human incursion both past and present. As the player wanders the world collecting stars, the soundtrack builds and gains complexity. It was created with Dain Woods and Brandon Li.</p>
+				<p>This game was my final project for <em>Modern Game Engines,</em> a Brown University course about writing game engines. I wrote the engine for the game, which uses OpenGL for rendering, FMOD for audio, and RakNet for networking. It is built around an Entity/Component/System (ECS) architecture to handle updates and drawing. It is capable of dealing with hundreds of GameObjects and rendering complex environments while maintaining a solid 60 FPS. It supports real-time audio filtering and generation, arbitrary triangle mesh collision, and rigged mesh animation. It also has many features not used in Vulpecula but used in other projects, including a full AI suite based on behavior trees.</p>
+				<p>This project was unlike anything I had worked on before. Writing the entire engine from the ground up was challenging, rewarding, and really exciting. I was constantly thinking about how to make engine code as generic and robust as possible while also keeping boilerplate to a minimum. I dove deeper into C++ and OpenGL than I ever had before. I am extremely proud of the result. Unfortunately, due to the combination of libraries needed, I have not yet been able to build it for any platform other than the Brown CS department Linux computers, so it can only be played there.</p>
+				<p>In addition to the engine programming, I implemented all of the gameplay, wrote all of the music, made and animated all of the models, and created all of the terrain. As a final project for another class, I used Alloy to model the GameObject management system at the core of the engine and prove its correctness. I was able to guarantee that the engine never tracks a component of a deleted object, always propagates deletes as far down as they can go, and many other important properties.</p>
+				<p>Check it out: 
+					<a href="https://www.youtube.com/watch?v=8ie8TZre7pI">YouTube</a>
+					<a href="https://github.com/Shanghai-/SynthwaveGame">GitHub</a>
+				</p>
+			</div>
+			<div class="project-divider"></div>
+
+			<div class="thin">
+				<img src="images/projects/skate.png" onclick="showLightbox(this);"/>
+			</div>
+			<div class="thin">
+				<h2>Skate or Thrive <span>(Desktop, 2019)</span></h2>
+				<p>I developed this game in Unity for a course on worldbuilding at Brown. It is a skating game inspired by the <em>Tony Hawk</em> and <em>Jet Set Radio</em> series. This was a solo project, so I wrote all of the gameplay code as well as creating all of the models and animations. It was an incredible learning experience, as I had never done character modeling or 3D animation before. Writing a simple, extensible dialogue system and creating versatile trigger points for grind tricks were both interesting challenges. It was fun trying to figure out how to make the same piece of code work for any kind of character orientation. That being said, the most rewarding part of the project was definitely fleshing out the world with characters and environment assets. I could feel the world of the game start to come alive as I added more details and ways to interact.</p>
+			</div>
+			<div class="project-divider"></div>
+
 			<div class="wide" style="padding-bottom: 10px;">
 				<iframe width="100%" height="520px" style="width:100%;height:520px" src="https://www.youtube.com/embed/i1dlkPFMAfc" frameborder="0" allowfullscreen="true"></iframe>
 			</div>
@@ -154,7 +185,7 @@
 		</div>
 	</main>
 	<footer>
-		&copy; Brendan Walsh, 2018.
+		&copy; Brendan Walsh, 2019.
 	</footer>
 	<div id="lightbox">
 		<span id="close" onclick="closeLightbox()">&times;</span>
