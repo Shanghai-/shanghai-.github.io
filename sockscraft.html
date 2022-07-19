@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+	<title>Sockscraft 2 Modding</title>
+	<link rel="stylesheet" href="css/default_style.css">
+    <link rel="stylesheet" href="css/modguide.css">
+	<link href="https://fonts.googleapis.com/css?family=Questrial|Roboto+Slab:300,700" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="description" content="Clientside Mod Instructions for Sockscraft 2">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png?v=8jemNgvx8l">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png?v=8jemNgvx8l">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png?v=8jemNgvx8l">
+	<link rel="manifest" href="images/icons/manifest.json?v=8jemNgvx8l">
+	<link rel="shortcut icon" href="images/icons/favicon.ico?v=8jemNgvx8l">
+	<meta name="msapplication-config" content="images/icons/browserconfig.xml?v=8jemNgvx8l">
+	<meta name="theme-color" content="#3889b8">
+</head>
+<body>
+    <main>
+		<div class="content-wrapper">
+			<h1>Unofficial <span>Sockscraft 2</span> Modding Guide</h1>
+            <h2>Introduction</h2>
+            <p>
+                <em>Sockscraft 2</em> is a subscribers-only Minecraft server run by streamer and game dev <a href="https://www.twitch.tv/socksbx">Socksbx.</a>
+                It is a <strong>vanilla server,</strong> and does <strong>not</strong> require mods to play. However, many players choose to use client-side mods, which are 
+                compatible with vanilla servers, to enhance their gameplay experience. This guide explains how to set up a modded Minecraft instance for use with 
+                <em>Sockscraft 2.</em> It assumes no prior knowledge of modded Minecraft. If you're familiar with modding already and just want some mod recommendations,
+                skip to <a href="#modsHeader">"Recommended Mods"</a> below.
+            </p>
+            <p>
+                This guide was written by <span>ShanghaiOhMy</span>, and is in no way official. Feel free to message <span>Shanghai#5385</span> on Discord if you have any 
+                questions or issues with these instructions, but please remember that I am not a server administrator or an official server representative in any way. 
+            </p>
+            <h2>Ethos</h2>
+            <p>
+                Because Sockscraft does not require players to use a standardized modpack, many players will not be using mods. You are expected to keep your mod choices
+                and usage fair to other players so that everyone can have fun. Do not install mods that give you an unfair advantage over other players, such as xray mods.
+                If engaging in PVP combat, do not use your mini-map to track the opposing player. While the mods used are client-side only, you should still consider how 
+                your choices may impact other players. 
+            </p>
+            <h1>Setup</h1>
+            <h2>Getting a Mod Manager</h2>
+            <p>
+                The first step to creating a modded client for <em>Sockscraft 2</em> is to get a mod manager. Mod managers (or simply "launchers") are programs that manage
+                the creation of new minecraft instances and installation of mods for you. There are a number of launchers out there, but for this tutorial we will use
+                <a href="https://download.curseforge.com/">CurseForge.</a> Some alternatives include <a href="https://gdevs.io/">GDLauncher</a> and 
+                <a href="https://skmedix.pl/sklauncher">SKLauncher.</a>
+            </p>
+            <h2>Creating a New Instance</h2>
+            <p>
+                Once you have CurseForge installed and running, you will need to create a new Minecraft instance using the "Create Custom Profile" button at the top right
+                of the application.
+            </p>
+            <img src="images/sockscraft/AddNewProfile.png" alt='A screenshot of CurseForge. The "Create Custom Profile" button in the top right is highlighted.'/>
+            <p>
+                You can name this instance whatever you want, and give it any picture you want to represent it in your profile list (I chose the 
+                <a href="https://i.imgur.com/MZM8ggR.png">Sockscraft 2 title art</a>). Next, you <strong>must</strong> select <span>1.18.2</span> for the Minecraft Version.
+                This is the version the server is running, and if our client doesn't match it, we won't be able to connect.
+            </p>
+            <h2>Choosing a Game Type</h2>
+            <p>
+                The next step in the custom profile dialogue asks you to choose between Forge, Fabric, and Vanilla for this profile. Vanilla is just unmodified Minecraft,
+                which is not what we want for this task. Our choice is between <span>Forge</span> and <span>Fabric</span>. These are two different modding platforms
+                that expose the workings of the game to developers in different ways. As a player, there is no functional difference between the two, though Fabric is
+                generally regarded as more performant. The real difference is in the selection of available mods; because they are two different modding platforms, Forge
+                and Fabric have different mods available. Many of the most popular mods maintain versions for both Fabric and Forge, but some newer or older mods may only
+                support one or the other. If you have any specific mods in mind, now is a good time to check which platforms they support before you make this decision.
+            </p>
+            <p>
+                For the purposes of this tutorial, we will be using <span>Forge</span>. I chose Forge because it has been around for longer, which means it has accumulated
+                more available mods than Fabric. Select "Forge" for the game type, and leave the Modloader Version at whatever default value CurseForge has given it.
+            </p>
+            <img src="images/sockscraft/ProfileSettings.png" alt="A screenshot of CurseForge's new profile dialogue. The Minecraft version is set to 1.18.2, and the Game Type is set to Forge."/>
+            <h1>Installing Mods</h1>
+            <p>
+                You are now ready to add some mods to your new instance! Click on the Profile's image (not the "Play" button) to open its details view. Click the 
+                "Add More Content" button to enter the mod search screen. From here you can search, sort, and filter CurseForge's database of Minecraft mods. Clicking on
+                a mod entry will bring you to its details page, where you can see a description, screenshots, and more. If a mod looks interesting, just hit "install" and
+                it will be added to your instance.
+            </p>
+            <p>
+                <span>Remember:</span> you won't be able to connect to the server if you install any mods that aren't client-side only. 
+                If a mod adds new content to the game, it probably isn't usable without the server running it too. Check mod descriptions for an indication of whether they
+                require a server component before installing.
+            </p>
+            <h1 id="modsHeader">Recommended Mods</h1>
+            <p>
+                The mods listed below are the ones that I personally am playing with. None of them are required, and you should feel free to add or remove mods as you see
+                fit. I have broken my list into categories to make browsing easier.
+            </p>
+            <h2>Utility</h2>
+            <p>
+                These are simple utility mods that make small but important changes. Mostly quality of life improvements.
+            </p>
+            <ul>
+                <li>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/configured">Configured:</a> Adds a mod configuration menu to the main menu of Minecraft.
+                    This is much easier to browse than digging through .toml config files yourself, and often contains explanations of the individual config items
+                    that may not be present in the config files themselves.
+                </li>
+                <li>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/mouse-tweaks">Mouse Tweaks:</a> A simple mod which improves the feel of click-and-drag 
+                    interactions in item GUIs. I find this much more intuitive when I'm crafting things.
+                </li>
+                <li>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/client-tweaks">Client Tweaks:</a> Moves the music and master volume sliders to the top level 
+                    of the pause menu. Also has some nice options for reducing accidental torch placements with offhand torches.
+                </li>
+                <li>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/controlling">Controlling:</a> Adds a search bar to the key bindings screen, along with
+                    indicators for conflicting and unbound keys. Without a bunch of big content mods adding new keybinds, this is less important, but I still find
+                    it useful to have around.
+                </li>
+            </ul>
+            <h2>Mapping</h2>
+            <p>
+                Mini-maps, full-screen maps, and waypoints are all extremely useful in a large multiplayer server like Sockscraft. There are dozens of mods that provide
+                these capabilities in various forms, but I recommend choosing one of the two most popular ones:
+            </p>
+            <ul>
+                <li>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap">Xaero's Minimap</a> and 
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map">Xaero's World Map</a>:
+                    This is the pair of mods that I am currently using for my map + minimap. It is extremely similar to JourneyMap in features, but I prefer its minimap 
+                    display a little more. Both mods allow you to set waypoints at any point in the world and share them with other players, which helps with navigation
+                    around the many points of interest in the Sockscraft server.
+                </li>
+                <li>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/journeymap">JourneyMap:</a> Although I am less enthusiastic about its minimap, JourneyMap's
+                    waypoints are more fun to use. They appear in the world as large beacons and can be seen from very far away. It's an equally valid choice for a
+                    mapping mod.
+                </li>
+            </ul>
+            <h2>
+                Information
+            </h2>
+            <p>
+                These mods help me spend more time in the game and less time on the Minecraft Wiki looking up how to craft a spyglass.
+            </p>
+            <ul>
+                <li>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/jade">Jade:</a> This mod adds a small element to the top center of the HUD which lists the name
+                    and some metadata about whatever block or entity you are looking at. A staple of modpacks, it is extremely useful both for players who are not very 
+                    familiar with all of the blocks in the game <em>and</em> veterans who want access to more detailed information at a glance.
+                </li>
+                <li>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/jei">Just Enough Items (JEI):</a> A cornerstone of Minecraft modding since time immemorial. This
+                    mod adds a list of every item in the game to the right side of the inventory/crafting screen, along with a search bar to help you find what you're
+                    looking for. Left-clicking an item pops up a GUI with its crafting recipe, and right-clicking shows you recipes that use it. This can save a lot of
+                    time that would otherwise be spent leafing through the in-game crafting book or googling how to craft something.
+                </li>
+            </ul>
+            <h2>
+                Cosmetic
+            </h2>
+            <p>
+                These mods make visual changes to the game rather than functional ones.
+            </p>
+            <ul>
+                <li>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/chat-heads">Chat Heads:</a> This mod shows player skins next to messages in chat! It's a very
+                    cute way to personalize messages from other users a bit more, especially users who are RPing with character skins. 
+                </li>
+                <li>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/custom-player-models">Customizable Player Models:</a> This mod lets players create and share
+                    fully custom models & textures for their players. It's extremely fun and expressive, but takes a lot of time to figure out & build something with.
+                    <span>Even if you don't plan to make a model for yourself, it's still fun to have this mod installed so you can see other players' models!</span>
+                </li>
+                <li>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/effective-forge">Effective:</a> Adds water splashes when items/entities fall into water, as
+                    well as mist particles at the bottoms of waterfalls. The ambient waterfall sounds that it adds were much too loud and seemed to never stop though,
+                    so I would recommend turning those off in the sound menu.
+                </li>
+                <li>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/simple-discord-rpc">Simple Discord RPC:</a> The most optional of optional mods. Adds support
+                    for rich Discord integration into the pack. This is really meant for modpack developers to advertise their modpacks via Discord's "now playing"
+                    feature, but I figured it was fun to have a way to show that you're playing Sockscraft specifically to other players in the Discord server. The
+                    config that I created for this mod is available <a href="downloads/simple-rpc.toml" download>here.</a> To use the config, open the overflow menu next to 
+                    "Play" on your Profile's details screen, then select "Open Folder" and drag the downloaded config into the "config" folder.
+                </li>
+            </ul>
+            <h2>
+                Optimization
+            </h2>
+            <p>
+                Coming soon. TL;DR you can use Optifine and it won't break things, but if your frames are already fine and you don't want to use shaders then don't bother.
+                I also hear good things about Sodium, but I've never tried it myself.
+            </p>
+            Happy mining!<br/>
+            <img src="images/sockscraft/alder.gif"/>
+        </div>
+	</main>
+	<footer>
+		La La La... 🦁💕
+	</footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+body {
+    background-color: #FFF8E7;
+}
+
+h2 {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 700;
+	font-size: 26px;
+	margin-bottom: 0px;
+}
+
+ul {
+	margin-top: 0px;
+}
+
+hr {
+	border: 0;
+	border-bottom: 2px dashed #3889b8;
+}
+
+.content-wrapper {
+	font-family: 'Questrial', sans-serif;
+	font-size: 18px;
+}
+
+.divider {
+	width: 76%;
+	height: 3px;
+	background-color: #f2e01a;
+	margin: 3px auto 25px auto;
+}
